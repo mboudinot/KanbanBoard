@@ -6,8 +6,9 @@ require.config({
     handlebars: "src/js/lib/handlebars",
     lodash: "src/js/lib/lodash.compat",
     hbs: "src/js/lib/require-handlebars-plugin/hbs",
-    colonnesController: "src/js/controller/ColonnesController",
+    colonnesView: "src/js/view/ColonnesView",
     colonnes: "src/js/model/Colonnes",
+    colonne: "src/js/model/Colonne",
     jasmine: "test/lib/jasmine-2.3.4/jasmine",
     "jasmine-html": "test/lib/jasmine-2.3.4/jasmine-html",
     boot: "test/lib/jasmine-2.3.4/boot"
@@ -40,7 +41,7 @@ require.config({
 });
 
 var specs = [
-  "test/controller/ColonnesControllerSpec"
+  "test/controller/ColonnesViewSpec"
   ];
 
 // Load Jasmine - This will still create all of the normal Jasmine browser globals unless `boot.js` is re-written to use the

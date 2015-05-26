@@ -1,10 +1,6 @@
-define(['backbone', 'model/Colonne'], function(Backbone, Colonne){
+define(['backbone', 'colonne'], function(Backbone, Colonne){
 
-  var Colonnes = Backbone.Collection.extend({
-
-    model: Colonne
-
-  });
+  var Colonnes = Backbone.Collection.extend({model: Colonne});
 
   return Colonnes;
 });
