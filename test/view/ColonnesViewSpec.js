@@ -1,5 +1,5 @@
 define(['backbone', 'colonnesView', 'colonnes'], function(Backbone, ColonnesView, Colonnes) {
-  describe("colonne controller test", function() {
+  describe("colonne view test", function() {
     var colonnesView;
 
     beforeEach(function() {
@@ -26,7 +26,7 @@ define(['backbone', 'colonnesView', 'colonnes'], function(Backbone, ColonnesView
       expect(colonnesView.colonnes.size()).toBe(5);
     });
 
-    it("création de 5 colonnes", function() {
+    it("création de 2 colonnes", function() {
       //Given
       colonnesView = new ColonnesView();
       //When
@@ -35,5 +35,7 @@ define(['backbone', 'colonnesView', 'colonnes'], function(Backbone, ColonnesView
       //Then
       expect(colonnesView.colonnes.size()).toBe(2);
     });
+
+    
   });
 });

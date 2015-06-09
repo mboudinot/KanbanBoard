@@ -1,9 +1,9 @@
-define(['backbone','colonnes', 'colonne'], function(Backbone, Colonnes, Colonne){
+define(['backbone', 'handlebars', 'colonnes', 'colonne'], 
+  function(Backbone, Handlebars, Colonnes, Colonne){
 
 var vueSurLaMer = Backbone.View.extend({
 
   //model : Colonnes,
-
   colonnes: new Colonnes(),
 
   initialize: function() {
@@ -12,7 +12,7 @@ var vueSurLaMer = Backbone.View.extend({
 
   add: function(nb) {
     for (var i = 0; i < nb; i++) {
-      var colonne = new Colonne({titre:'colonne'});
+      var colonne = new Colonne({titre:'colonne' + i});
       this.colonnes.add(colonne);
     }
   }
