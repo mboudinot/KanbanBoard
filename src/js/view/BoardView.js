@@ -1,10 +1,9 @@
-define(['backbone', 'handlebars', 'colonnes', 'colonne', ''], 
-  function(Backbone, Handlebars, Colonnes, Colonne, Board){
+define(['backbone', 'handlebars', 'colonnes', 'colonne', 'hbs!templates/board'],
+  function(Backbone, Handlebars, Colonnes, Colonne, template){
 
 var vueSurLaMer = Backbone.View.extend({
 
-  //model : Colonnes,
-  //template : Handlebars.compile(board),
+  el: "#board",
   colonnes: new Colonnes(),
 
   initialize: function() {
@@ -12,7 +11,8 @@ var vueSurLaMer = Backbone.View.extend({
   },
 
   render: function() {
-    //this.$el.html(this.template());
+    this.$el.html(template({title: "mon board"}));
+    return this;
   }
 
 });

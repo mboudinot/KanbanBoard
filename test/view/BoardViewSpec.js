@@ -1,15 +1,23 @@
 define(['jasmineJquery','backbone', 'boardView'], function(jasmineJquery, Backbone, BoardView) {
   describe("board view test", function() {
 
-	jasmineJquery.getFixtures().read("<div id='clubmed'></div>");
-  	var board = new BoardView();
+    var boardView;
 
-  	it("should display title",function() {
-	  	board.render();
+    beforeEach(function () {
+      setFixtures("<div id='trello'><div id='board'></div></div>");
+      boardView = new BoardView();
+    });
 
-	  	expect($("#boardTitle").text()).toBe("mon board");
-  	});
+    it("should display title",function() {
+      // Given
+
+      // When
+      boardView.render();
+
+      // Then
+      expect($("#boardTitle").text()).toEqual("mon board");
+    });
   });
 
-  
+
 });

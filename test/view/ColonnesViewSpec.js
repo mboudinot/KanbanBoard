@@ -36,6 +36,6 @@ define(['backbone', 'colonnesView', 'colonnes'], function(Backbone, ColonnesView
       expect(colonnesView.colonnes.size()).toBe(2);
     });
 
-    
+
   });
 });

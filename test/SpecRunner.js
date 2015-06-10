@@ -3,8 +3,9 @@ require.config({
   paths: {
     jquery: "src/js/lib/jquery",
     backbone: "src/js/lib/backbone",
-    handlebars: "src/js/lib/handlebars",
     lodash: "src/js/lib/lodash.compat",
+    templates: "src/templates/",
+    handlebars: "src/js/lib/handlebars",
     hbs: "src/js/lib/require-handlebars-plugin/hbs",
     boardView: "src/js/view/BoardView",
     colonnesView: "src/js/view/ColonnesView",
@@ -13,7 +14,7 @@ require.config({
     jasmine: "test/lib/jasmine-2.3.4/jasmine",
     "jasmine-html": "test/lib/jasmine-2.3.4/jasmine-html",
     boot: "test/lib/jasmine-2.3.4/boot",
-    jasmineJquery: "test/lib/jasmine-jquery-1.3.1"
+    jasmineJquery: "test/lib/jasmine-jquery"
   },
   map: {
     // Backbone et Backbone-Associations ont une dépendence à 'underscore' (en réalité on utilise Lodash)
