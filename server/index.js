@@ -10,8 +10,8 @@ colors = {
             green: function (str) {
                 return "\033[0m\033[32m" + str + "\033[0m"
             },
-            blue: function (str) {
-                return "\033[0m\033[34m" + str + "\033[0m"
+            red: function (str) {
+                return "\033[0m\033[31m" + str + "\033[0m"
             },
             yellow: function (str) {
                 return "\033[0m\033[33m" + str + "\033[0m"
@@ -20,7 +20,7 @@ colors = {
 
 
 console.log("\n  " + colors.yellow("Dojo Team.\n  2015, Trello Like.\n") + "  ------------\n")
-console.log(colors.green("  Server running on port ") + port + "\n")
+console.log(colors.green("  Server running on port ") + colors.red(port) + "\n")
 
 app.use(express.static(path.join(__dirname, '../')))
 

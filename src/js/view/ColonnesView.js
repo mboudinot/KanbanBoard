@@ -1,4 +1,4 @@
-define(['backbone', 'handlebars', 'colonnes', 'colonne'], 
+define(['backbone', 'handlebars', 'model/Colonnes', 'model/Colonne'],
   function(Backbone, Handlebars, Colonnes, Colonne){
 
 var vueSurLaMer = Backbone.View.extend({

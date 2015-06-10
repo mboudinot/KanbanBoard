@@ -16,6 +16,8 @@ define(['jasmineJquery','backbone', 'boardView'], function(jasmineJquery, Backbo
 
       // Then
       expect($("#boardTitle").text()).toEqual("mon board");
+      // var $boardTitle = $(boardView.$el.find("#boardTitle"));
+      // expect($boardTitle.text()).toEqual("mon board");
     });
   });
 

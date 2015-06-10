@@ -1,4 +1,4 @@
-define(['backbone', 'handlebars', 'colonnes', 'colonne', 'hbs!templates/board'],
+define(['backbone', 'handlebars', 'model/Colonnes', 'model/Colonne', 'hbs!../templates/board'],
   function(Backbone, Handlebars, Colonnes, Colonne, template){
 
 var vueSurLaMer = Backbone.View.extend({

@@ -1,4 +1,4 @@
-define(['backbone', 'colonne'], function(Backbone, Colonne){
+define(['backbone', 'model/Colonne'], function(Backbone, Colonne){
 
   var Colonnes = Backbone.Collection.extend({model: Colonne});
 

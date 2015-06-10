@@ -1,4 +1,4 @@
-define(['backbone', 'colonnesView', 'colonnes'], function(Backbone, ColonnesView, Colonnes) {
+define(['backbone', 'view/ColonnesView', 'model/Colonnes'], function(Backbone, ColonnesView, Colonnes) {
   describe("colonne view test", function() {
     var colonnesView;
 

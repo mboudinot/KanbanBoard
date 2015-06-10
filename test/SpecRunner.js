@@ -1,20 +1,20 @@
 require.config({
-  baseUrl: "..",
+  baseUrl: "../src/js",
   paths: {
-    jquery: "src/js/lib/jquery",
-    backbone: "src/js/lib/backbone",
-    lodash: "src/js/lib/lodash.compat",
-    templates: "src/templates/",
-    handlebars: "src/js/lib/handlebars",
-    hbs: "src/js/lib/require-handlebars-plugin/hbs",
-    boardView: "src/js/view/BoardView",
-    colonnesView: "src/js/view/ColonnesView",
-    colonnes: "src/js/model/Colonnes",
-    colonne: "src/js/model/Colonne",
-    jasmine: "test/lib/jasmine-2.3.4/jasmine",
-    "jasmine-html": "test/lib/jasmine-2.3.4/jasmine-html",
-    boot: "test/lib/jasmine-2.3.4/boot",
-    jasmineJquery: "test/lib/jasmine-jquery"
+    jquery: "lib/jquery",
+    backbone: "lib/backbone",
+    lodash: "lib/lodash.compat",
+    templates: "../templates/",
+    handlebars: "lib/handlebars",
+    hbs: "lib/require-handlebars-plugin/hbs",
+    boardView: "view/BoardView",
+    // colonnesView: "view/ColonnesView",
+    // colonnes: "model/Colonnes",
+    // colonne: "model/Colonne",
+    jasmine: "../../test/lib/jasmine-2.3.4/jasmine",
+    "jasmine-html": "../../test/lib/jasmine-2.3.4/jasmine-html",
+    boot: "../../test/lib/jasmine-2.3.4/boot",
+    jasmineJquery: "../../test/lib/jasmine-jquery"
   },
   map: {
     // Backbone et Backbone-Associations ont une dépendence à 'underscore' (en réalité on utilise Lodash)
@@ -48,8 +48,8 @@ require.config({
 });
 
 var specs = [
-  "test/view/ColonnesViewSpec",
-  "test/view/BoardViewSpec"
+  "../../test/view/ColonnesViewSpec",
+  "../../test/view/BoardViewSpec"
   ];
 
 // Load Jasmine - This will still create all of the normal Jasmine browser globals unless `boot.js` is re-written to use the
