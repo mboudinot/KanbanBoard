@@ -48,7 +48,6 @@ require.config({
 });
 
 var specs = [
-  "../../test/view/ColonnesViewSpec",
   "../../test/view/BoardViewSpec"
   ];
 

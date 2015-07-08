@@ -29,7 +29,7 @@ if (!window.jasmine) {
 
             var boardView = new BoardView();
 
-            boardView.render();
+
     })
 };
 

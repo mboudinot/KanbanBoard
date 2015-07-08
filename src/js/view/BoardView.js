@@ -1,17 +1,21 @@
-define(['backbone', 'handlebars', 'model/Colonnes', 'model/Colonne', 'hbs!../templates/board', 'hbs!../templates/colonne'],
-  function(Backbone, Handlebars, Colonnes, Colonne, template, colonneTemplate){
+define(['backbone', 'handlebars', 'model/ColonneCollection', 'model/Colonne', 'hbs!../templates/board', 'hbs!../templates/colonne'],
+  function(Backbone, Handlebars, ColonneCollection, Colonne, template, colonneTemplate){
 
 var BoardView = Backbone.View.extend({
     el: "#board",
-    colonnes: new Colonnes(),
+
+    model: new ColonneCollection(),
 
     events: {
       "click #addColumn": "addColumn",
-      "click #removeColumn": "removeColumn"
+      "click .removeColumn": "removeColumn"
     },
 
     initialize: function() {
-      this.colonnes.reset();
+      this.render();
+      for (i=0; i<3; i++) {
+        this.addColumn();
+      }
     },
 
     render: function() {
@@ -21,11 +25,16 @@ var BoardView = Backbone.View.extend({
 
     addColumn: function() {
       colonneTemplate();
+      this.model.add();
       this.$('#colonneList').append(colonneTemplate());
     },
 
-    removeColumn: function() {
-      this.$('#colonneList .colonne').last().remove();
+    removeColumn: function(e) {
+      $(e.target).closest("div").remove();
+    },
+
+    modifyColumnTitle: function(e) {
+      $(e.target).closest("div").remove();
     }
 
   });

@@ -6,7 +6,7 @@ define(['jasmineJquery','backbone', 'boardView'], function(jasmineJquery, Backbo
     beforeEach(function () {
       setFixtures("<div id='trello'><div id='board'></div></div>");
       boardView = new BoardView();
-      boardView.render();
+
     });
 
     it("should display title",function() {
@@ -18,7 +18,6 @@ define(['jasmineJquery','backbone', 'boardView'], function(jasmineJquery, Backbo
       it ("show addColumn button" , function() {
         // Then
         expect($("#addColumn")).toBeVisible();
-
       });
 
       it ("click on button adds Column in board view" , function() {
@@ -27,14 +26,34 @@ define(['jasmineJquery','backbone', 'boardView'], function(jasmineJquery, Backbo
 
         // Then
         expect($("#colonneList .colonne").length).toEqual(4);
+        expect(boardView.model.length).toEqual(4);
       });
 
+      it ("should add removeButton" , function() {
+        //When
+        $("#addColumn").click();
+
+        var $lastColumn = $(".colonne" ).last();
+        // Then
+        expect($lastColumn.find("button.removeColumn").length).toEqual(1);
+
+      });
     });
 
-    describe("removeColumn", function() {
-      it ("should remove column when clicked" , function() {
+    describe("modify column title", function() {
+      it("should modify title when input changed", function() {
+        // Given
+
+        // When
+        $(".colonne");
+        // Then
+      });
+    });
+
+    describe("remove Column", function() {
+      it ("should remove first column when clicked" , function() {
         //When
-        $("#removeColumn").click();
+        $(".removeColumn")[0].click();
 
         // Then
         expect($("#colonneList .colonne").length).toEqual(2);
@@ -46,12 +65,12 @@ define(['jasmineJquery','backbone', 'boardView'], function(jasmineJquery, Backbo
       expect($(".colonne").length).toEqual(3);
     });
 
-    it ("should display columns with titles", function() {
+    it ("should display columns with titles tip", function() {
       // Then
-      var colonneTitle = $(".colonne > .titre");
-      expect($(colonneTitle[0]).text()).toEqual("Je sais pas");
-      expect($(colonneTitle[1]).text()).toEqual("Je sais pas");
-      expect($(colonneTitle[2]).text()).toEqual("Je suis un blaireau!!!");
+      var colonneTitle = $(".colonne > .titre input");
+      expect($(colonneTitle[0]).attr("placeholder")).toEqual("titre de la colonne");
+      expect($(colonneTitle[1]).attr("placeholder")).toEqual("titre de la colonne");
+      expect($(colonneTitle[2]).attr("placeholder")).toEqual("titre de la colonne");
     });
   });
 
