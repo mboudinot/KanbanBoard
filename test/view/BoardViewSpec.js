@@ -40,7 +40,7 @@ define(['jasmineJquery','backbone', 'boardView'], function(jasmineJquery, Backbo
       });
     });
 
-    describe("modify column title", function() {
+    xdescribe("modify column title", function() {
       it("should modify title when input changed", function() {
         // Given
 

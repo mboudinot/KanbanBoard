@@ -4,14 +4,13 @@ define(['backbone', 'handlebars', 'model/ColonneCollection', 'model/Colonne', 'h
 var BoardView = Backbone.View.extend({
     el: "#board",
 
-    model: new ColonneCollection(),
-
     events: {
       "click #addColumn": "addColumn",
       "click .removeColumn": "removeColumn"
     },
 
     initialize: function() {
+      this.model = new ColonneCollection();
       this.render();
       for (i=0; i<3; i++) {
         this.addColumn();
@@ -25,7 +24,7 @@ var BoardView = Backbone.View.extend({
 
     addColumn: function() {
       colonneTemplate();
-      this.model.add();
+      this.model.add(new Colonne());
       this.$('#colonneList').append(colonneTemplate());
     },
 
