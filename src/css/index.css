@@ -121,17 +121,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-div.header {
-  background-image: url("https://d78fikflryjgj.cloudfront.net/images/50b4ebc64391dc394a38e73aed57f0e2/header-logo.png");
-  background-repeat: no-repeat;
-  background-position-x: 50%;
-  background-color: #f00;
-  text-align: center;
-  height: 2em;
-}
-.colonne {
-  display: block;
-}
 @font-face {
   font-family: "icons";
   src: url("../static/fonts/icons.eot");
@@ -1053,4 +1042,67 @@ div.header {
 }
 .icon-zoom29:before {
   content: "\E12E";
+}
+body {
+  background-color: #519839;
+  font-family: Helvetica;
+}
+button {
+  cursor: pointer;
+}
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+.kb-Trello-Header {
+  height: 2.6em;
+  background: rgba(0,0,0,0.15);
+}
+.kb-Header-Logo {
+  position: relative;
+  top: 0.4em;
+}
+.kb-Header-Logo--default {
+  background-image: url("https://d78fikflryjgj.cloudfront.net/images/50b4ebc64391dc394a38e73aed57f0e2/header-logo.png");
+  width: 80px;
+  height: 30px;
+  display: block;
+  margin: 0 auto;
+}
+.kb-Board {
+  margin: 1em;
+}
+.kb-BoardHeader-Title {
+  color: #fff;
+  font-size: 1.7em;
+  margin: 0 0 0.2em;
+}
+.kb-Board-colonneList {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1em 0 0;
+}
+.colonne {
+  background: #e2e4e6;
+  border-radius: 3px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 17em;
+  margin: 0 1em 0 0;
+}
+.titre {
+  padding: 0.5em 2.2em 0.5em 0.6em;
+  font-size: 0.95em;
+  min-height: 1.3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  color: #444;
+  font-weight: bold;
 }

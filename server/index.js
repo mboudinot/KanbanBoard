@@ -21,6 +21,7 @@ colors = {
 
 console.log("\n  " + colors.yellow("Dojo Team.\n  2015, Trello Like.\n") + "  ------------\n")
 console.log(colors.green("  Server running on port ") + colors.red(port) + "\n")
+console.log(colors.yellow("  Par ordre d'apparition : \n  Eric Ondoa\n  Issame El Kharbili\n  Boris Monti\n  Matthieu Boudinot\n  Boliang Tan\n  Jamal Zidane\n  Françoise Lasserre\n  Alexis Mauroy\n  José Cardoso\n  Dominique Joisin") + "\n")
 
 app.use(express.static(path.join(__dirname, '../')))
 
