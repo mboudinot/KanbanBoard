@@ -4,9 +4,9 @@ var gulp = require("gulp"),
   iconfontCss = require('gulp-iconfont-css');
   stylus = require("gulp-stylus");
 
-//gulp.task("NomDeLaTask", function() {
-//  gulp.watch(["cheminsVersFichiers", "cheminsVersFichiers"], ["NomDeLaTaskAExexcuter"])
-//});
+gulp.task("gulpWatcher", function() {
+  gulp.watch(["./src/static/stylus/*.styl"], ["style"])
+});
 
 gulp.task('webfont', function() {
  return gulp.src('src/static/icons/*') // emplacement des icônes en SVG

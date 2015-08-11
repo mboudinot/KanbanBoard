@@ -35,7 +35,7 @@ define(['jasmineJquery','backbone', 'boardView'], function(jasmineJquery, Backbo
 
         var $lastColumn = $(".colonne" ).last();
         // Then
-        expect($lastColumn.find("button.removeColumn").length).toEqual(1);
+        expect($lastColumn.find("button.kb-button-removeColumn").length).toEqual(1);
 
       });
     });
@@ -53,7 +53,7 @@ define(['jasmineJquery','backbone', 'boardView'], function(jasmineJquery, Backbo
     describe("remove Column", function() {
       it ("should remove first column when clicked" , function() {
         //When
-        $(".removeColumn")[0].click();
+        $(".kb-button-removeColumn")[0].click();
 
         // Then
         expect($("#colonneList .colonne").length).toEqual(2);
@@ -67,7 +67,7 @@ define(['jasmineJquery','backbone', 'boardView'], function(jasmineJquery, Backbo
 
     it ("should display columns with titles tip", function() {
       // Then
-      var colonneTitle = $(".colonne > .titre input");
+      var colonneTitle = $(".colonne > .kb-column-titre input");
       expect($(colonneTitle[0]).attr("placeholder")).toEqual("titre de la colonne");
       expect($(colonneTitle[1]).attr("placeholder")).toEqual("titre de la colonne");
       expect($(colonneTitle[2]).attr("placeholder")).toEqual("titre de la colonne");

@@ -8,8 +8,9 @@
   flex-direction column
   width 17em
   margin 0 1em 0 0
+  position relative
 
-.titre
+.kb-column-titre
   padding .5em 2.2em .5em .6em
   font-size .95em
   min-height 1.3em
@@ -18,3 +19,39 @@
   word-wrap break-word
   color #444
   font-weight bold
+
+.kb-buttonAddColumn
+  padding 0.5em 1.5em
+  background rgba(0,0,0,0.15)
+  border-radius 0.3em
+  color white
+  font-weight bold
+  border 0
+
+.kb-button-removeColumn
+  background #e2e4e6
+  position absolute
+  top 0
+  right 0
+  border 0
+
+.kb-button-addTicket
+  padding 0.5em 0.5em
+  font-size .8em
+  &:hover
+    text-decoration underline
+    background rgba(0,0,0,0.15)
+    cursor pointer
+
+.kb-column-ticket
+  padding 0.5em 0.5em
+  border-radius 0.3em
+  background white
+
+.kb-column-deco
+  display inline-block
+  border-radius 0.25em
+  width 2em
+  height .5em
+  background orange
+

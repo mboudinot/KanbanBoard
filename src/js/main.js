@@ -25,11 +25,9 @@ require.config({
 
 if (!window.jasmine) {
     require(["jquery", "BoardView"], function ($, BoardView) {
-            "use strict";
+        "use strict";
 
-            var boardView = new BoardView();
-
-
+        var boardView = new BoardView();
     })
 };
 

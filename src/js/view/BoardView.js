@@ -6,7 +6,7 @@ var BoardView = Backbone.View.extend({
 
     events: {
       "click #addColumn": "addColumn",
-      "click .removeColumn": "removeColumn"
+      "click .kb-button-removeColumn": "removeColumn"
     },
 
     initialize: function() {
