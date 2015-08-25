@@ -4,7 +4,7 @@ var gulp = require("gulp"),
   iconfontCss = require('gulp-iconfont-css');
   stylus = require("gulp-stylus");
 
-gulp.task("gulpWatcher", function() {
+gulp.task("watch", function() {
   gulp.watch(["./src/static/stylus/*.styl"], ["style"])
 });
 

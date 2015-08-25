@@ -1115,16 +1115,20 @@ button {
   font-weight: bold;
   border: 0;
 }
+.kb-buttonAddColumn:hover {
+  background-color: #006400;
+}
 .kb-button-removeColumn {
-  background: #e2e4e6;
   position: absolute;
+  background-color: transparent;
   top: 0;
   right: 0;
   border: 0;
 }
 .kb-button-addTicket {
   padding: 0.5em 0.5em;
-  font-size: 0.8em;
+  font-size: 0.95em;
+  color: #808080;
 }
 .kb-button-addTicket:hover {
   text-decoration: underline;
@@ -1132,14 +1136,50 @@ button {
   cursor: pointer;
 }
 .kb-column-ticket {
+  position: relative;
   padding: 0.5em 0.5em;
+  border-bottom: 1px solid #ccc;
   border-radius: 0.3em;
   background: #fff;
+  margin: 0 0.5em 0.5em;
+}
+.kb-column-ticket:hover {
+  background: rgba(0,0,0,0.02);
+  cursor: pointer;
+}
+.kb-column-ticket:hover .kb-column-edit {
+  display: block;
+}
+.kb-column-decos {
+  margin: 0 0 0.4em;
 }
 .kb-column-deco {
   display: inline-block;
   border-radius: 0.25em;
   width: 2em;
   height: 0.5em;
+}
+.kb-column-deco--orange {
   background: #ffa500;
+}
+.kb-column-deco--pink {
+  background: #ffc0cb;
+}
+.kb-column-deco--violet {
+  background: #ee82ee;
+}
+.kb-column-deco--rouge {
+  background: #f00;
+}
+.kb-column-deco--blue {
+  background: #000080;
+}
+.kb-column-deco--cyan {
+  background: #0ff;
+}
+.kb-column-edit {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  display: none;
 }
