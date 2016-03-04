@@ -6,7 +6,8 @@ var BoardView = Backbone.View.extend({
 
     events: {
       "click #addColumn": "addColumn",
-      "click .kb-button-removeColumn": "removeColumn"
+      "click .kb-button-removeColumn": "removeColumn",
+      "change .kb-input-title": "modifyColumnTitle"
     },
 
     initialize: function() {
@@ -18,7 +19,7 @@ var BoardView = Backbone.View.extend({
     },
 
     render: function() {
-      this.$el.html(template({title: "mon board"}));
+      this.$el.html(template({title: "Mon board"}));
       return this;
     },
 
@@ -26,6 +27,8 @@ var BoardView = Backbone.View.extend({
       colonneTemplate();
       this.model.add(new Colonne());
       this.$('#colonneList').append(colonneTemplate());
+      var text = " " + this.$('#colonneList .colonne').length;
+      this.$('#colonneList .colonne:last h1').append(text);
     },
 
     removeColumn: function(e) {
@@ -33,7 +36,8 @@ var BoardView = Backbone.View.extend({
     },
 
     modifyColumnTitle: function(e) {
-      $(e.target).closest("div").remove();
+    	$(e.target).parent().find("h1").html($(e.target).val());
+    	$(e.target).val("");
     }
 
   });
