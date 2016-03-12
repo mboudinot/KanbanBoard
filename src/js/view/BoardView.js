@@ -24,11 +24,12 @@ var BoardView = Backbone.View.extend({
     },
 
     addColumn: function() {
-      colonneTemplate();
+      var columnCount = this.$('#colonneList .colonne').length;
+
       this.model.add(new Colonne());
-      this.$('#colonneList').append(colonneTemplate());
-      var text = " " + this.$('#colonneList .colonne').length;
-      this.$('#colonneList .colonne:last h1').append(text);
+      this.$('#colonneList').append(colonneTemplate({
+          columnNumber: columnCount + 1
+      }));
     },
 
     removeColumn: function(e) {
