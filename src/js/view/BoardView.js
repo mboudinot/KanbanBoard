@@ -37,8 +37,9 @@ var BoardView = Backbone.View.extend({
     },
 
     modifyColumnTitle: function(e) {
-    	$(e.target).parent().find("h1").html($(e.target).val());
-    	$(e.target).val("");
+        var newColumnTitle = $(e.target).val();
+        $(e.target).parent().find("h1").text(newColumnTitle);
+        $(e.target).val("");
     }
 
   });
